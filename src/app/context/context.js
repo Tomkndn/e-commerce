@@ -23,11 +23,15 @@ const MyProvider = ({ children }) => {
     setCount(cartDetails.length);
   }, [cartDetails])
   
+  const clearOut = ()=>{
+    setCartDetails([]);
+  }
 
   const value = {
     count,
     isItemAdded,
     cartDetails,
+    clearOut,
   };
 
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;

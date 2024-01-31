@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { useMyContext } from "../context/context";
@@ -7,7 +8,7 @@ import NoItem from "./noItem";
 
 export default function Cart() {
 
-  const { cartDetails, count, isItemAdded } = useMyContext();
+  const { cartDetails, clearOut, count, isItemAdded } = useMyContext();
 
   const getTotalCost = ()=>{
     return cartDetails.reduce((total,item)=> total + item.price,0);
@@ -76,7 +77,9 @@ export default function Cart() {
               {/* <button onClick={onPlaceOrderClick}>
               <a href="/orderPlaced.html">Place Order</a>
             </button> */}
-              <button>Checkout</button>
+              <Link href="/checkout">
+                <button onClick={() => clearOut()}>Checkout</button>
+              </Link>
               <div className="">Total : Rs. {getTotalCost()}</div>
             </div>
           </div>

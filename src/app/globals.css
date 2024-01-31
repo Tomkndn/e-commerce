@@ -157,12 +157,14 @@ body {
 }
 
 .search {
-  padding: 14px;
+  /* padding: 14px; */
   color: gray;
   color: rgb(29, 29, 29);
   min-width: 25px;
   text-align: center;
   position: absolute;
+  left: 41rem;
+  top: 2.4rem;
 }
 
 .addedToCart {
@@ -728,4 +730,52 @@ button a:focus {
     padding: 20px;
     width: 80%;
   }
+}
+
+/* checkout */
+
+#orderContainer
+{
+    font-family: 'Lato', sans-serif;
+    width: 80%;
+    padding-top: 170px;
+    padding-bottom: 100px;
+    margin: auto;
+    text-align: center;
+}
+#check
+{
+    color: rgb(5, 187, 5);
+    padding-bottom: 10px;
+    font-size: 10em;
+    display: flex;
+    justify-content: center;
+}
+#aboutCheck p
+{
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+#aboutCheck h1
+{
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 700px)
+{
+    #check{
+        font-size: 8em;
+        padding-bottom: 30px;
+    }
+    h1
+    {
+        font-size: 18px;
+    }
+    p
+    {
+        font-size: 15px;
+    }
 }
